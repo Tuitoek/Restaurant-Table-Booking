@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+#!/home/manow/Restaurant-Table-Booking/virtual/bin/python
+=======
 #!/bin/sh
 '''exec' "/home/alex/Documents/Moringa School Projects/Python3/Flask Projects/Restaurant-Table-Booking/virtual/bin/python" "$0" "$@"
 ' '''
+>>>>>>> 1b02767a6e5d9b475df0ef4a6ea9d062c6650161
 # -*- coding: utf-8 -*-
 import re
 import sys
