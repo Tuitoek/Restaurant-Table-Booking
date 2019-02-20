@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    {%block content%}
-    <h1>Restaurant</h1>
-    <p>Long week ahead</p>
-    {%endblock%}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock %}
+
+<!-- Block Content -->
+{% block content %}
+<div class="main">
+  <h3>Make Your Reservation</h3>
+  <p>Restaurant Reservations Online – Table Booking System for Restaurants</p>
+  <!-- <a href="#" class="myButton">Explore</a> -->
+</div>
+<div class="container row books">
+  <div class="one col-sm-6">
+      <h2>Making a reservation?</h2>
+      <a href="#" class="myButton">Book on Telbs</a>
+  </div>
+  <div class="two col-sm-6">
+      <div class="me">
+          <h2>Do you manage a restaurant?</h2>
+          <a href="#" class="myButtonz">Get Started</a>
+      </div>
+  </div>
+</div>
+{% endblock content %}
