@@ -1,0 +1,177 @@
+body {
+    background: url("../img/tablebookingappbackground3.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(#556670, #70625e);
+    opacity: .6;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.main {
+    text-align: center;
+    position: absolute;
+    top: 8%;
+    max-width: 600px;
+    left: 30%;
+}
+.books{
+    position: absolute;
+    top: 45%;
+    left: 23%;
+}
+.one{
+    z-index: 2;
+    padding: 25px;
+    width: 300px;
+    height: 150px;-moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    box-shadow: -4px 12px 14px -4px #000;
+    margin-top: 30px;
+    position: absolute;
+    text-align: center;
+    background-color: #61F8B9;
+}
+.me{
+    text-align: center;
+    left: 25%;
+    position: absolute;
+    margin-top: 5px;
+}
+p{
+    font-size: 38px;
+}
+.two{
+    position: absolute;
+    text-align: center;
+    width: 400px;
+    -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    box-shadow: 0px 12px 14px -4px #000;
+    height: 170px;
+    left: 20%;
+    z-index: 1;
+    padding: 50px;
+    background-color: #4B2F99;
+}
+h1 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+.myButton {
+    -moz-box-shadow: 0px 12px 14px -7px #5c0e70;
+    -webkit-box-shadow: 0px 12px 14px -7px #5c0e70;
+    box-shadow: 0px 12px 14px -7px #000;
+    background-color: #4B2F99;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 50px #5b8a3c;
+}
+
+.myButton:hover {
+    background-color: #8752b3;
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+.myButtonz {
+    -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    box-shadow: 0px 12px 14px -7px #000;
+    background-color: #61F8B9;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 50px #5b8a3c;
+}
+
+.myButtonz:hover {
+    background-color: #8752b3;
+}
+
+.myButtonz:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.container  .navbar{
+    height: 80%;
+    background-color: #8752b3;
+}
+
+.container{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+ul li{
+    list-style: none;
+    margin: 10px;
+    float: left;
+}
+ul li a{
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 50px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+}
+ul li a:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #61F8B9;
+    transition: .5s;
+    z-index: -1;
+}
+ul li a:hover:before{
+     height: 100%;
+     color: #4B2F99;
+}
