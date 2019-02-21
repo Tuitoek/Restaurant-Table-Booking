@@ -1,1 +1,1 @@
-SECRET_KEY='yelp'
+SECRET_KEY='a77302eea2d2'
