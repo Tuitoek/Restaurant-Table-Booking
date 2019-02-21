@@ -1,9 +1,10 @@
 from flask import render_template
 from . import main
 
-@main.route('/')
+#Views
+@main.route('/',methods= ['POST', 'GET'])
 def index():
     '''
-    Return the index page and details
+    View root page function that returns the index page and its data
     '''
     return render_template('index.html')
