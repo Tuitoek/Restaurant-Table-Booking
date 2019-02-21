@@ -7,9 +7,7 @@ class Config:
     contains configuration used in both production and development stages
     """
 
-    ## os.environ.get() used to get movie_api_key and secret key
-    # MOVIE_API_BASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
-    # MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
+   
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
     # simple mde  configurations
