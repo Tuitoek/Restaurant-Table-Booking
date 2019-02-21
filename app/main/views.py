@@ -33,3 +33,5 @@ def booking():
         return redirect(url_for('main.index'))
 
     return render_template('booking.html',book_form=book_form)
+
+    
