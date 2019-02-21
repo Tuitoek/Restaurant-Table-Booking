@@ -43,3 +43,12 @@ class Role(db.Model):
 
     def __repr__(self):
         return f'User {self.name}'
+
+class Book(db.Model):
+    __tablename__ = 'book'
+    id= db.Column(db.Integer,primary_key = True)
+    date = db.Column(db.String(100))
+    resname= db.Column(db.String(40))
+    restype = db.Column(db.String(30))
+    adult= db.Column(db.Integer)
+    children = db.Column(db.Integer) 
