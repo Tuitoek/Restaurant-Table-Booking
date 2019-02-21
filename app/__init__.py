@@ -2,26 +2,18 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config_options
-# from flask_login import LoginManager
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
 
 bootstrap=Bootstrap()
 db = SQLAlchemy()
-# login_manager = LoginManager()
-# login_manager.session_protection = 'strong'
-# login_manager.login_view = 'auth.login'
+login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
     app= Flask(__name__)
 
-    #Initializing flask extensions
-    bootstrap.init_app(app)
-<<<<<<< HEAD
-    db.init_app(app)
-    # login.init_app(app)
-
-=======
-    # login.init_app(app
->>>>>>> 1b02767a6e5d9b475df0ef4a6ea9d062c6650161
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
 
@@ -29,7 +21,11 @@ def create_app(config_name):
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
     from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint)
+    app.register_blueprint(auth_blueprint,url_prefix='/authenticate')
 
+    #Initializing flask extensions
+    bootstrap.init_app(app)
+    db.init_app(app)
+    # login.init_app(app)
 
     return app

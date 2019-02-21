@@ -3,3 +3,5 @@ virtual/
 .vscode/
 * .json
 __pycache__/
+start.sh
+slides
