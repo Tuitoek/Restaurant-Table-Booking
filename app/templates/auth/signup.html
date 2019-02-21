@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block styles%}
+    {{ super() }} 
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    {% endblock %}
+    <title></title>
+  </head>
+  <body>
+    {%block content%}
+    <div class="container">
+      <div class="col-md-6" style="float:right;">
+        <div class="jumbotron" style="background-color:black;">
+          <h3 style="color:white">Please sign in to be able to post !!<br>Be a well known blogger at the moment </h3
+          <div class="form-group" style="color:white">
+            {{wtf.quick_form(register_form)}}
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    {%endblock%}
+  </body>
+</html>
