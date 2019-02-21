@@ -15,13 +15,12 @@ def create_app(config_name):
 
     #Initializing flask extensions
     bootstrap.init_app(app)
-<<<<<<< HEAD
     db.init_app(app)
     # login.init_app(app)
 
-=======
+
     # login.init_app(app
->>>>>>> 1b02767a6e5d9b475df0ef4a6ea9d062c6650161
+
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
 
