@@ -7,6 +7,10 @@
       <li><a href="#">STORIES</a></li>
       <li><a href="#">BLOG</a></li>
       <li><a href="{{url_for('auth.login')}}">SIGNIN</a></li>
+      {% if current_user.is_authenticated %}
+      <a class="navbar-brand" href="{{url_for('auth.logout')}}">Sign out</a>
+      <li><a class="navbar-brand" href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a>
+      {% endif%}
     </ul>
   </div>
 </div>
