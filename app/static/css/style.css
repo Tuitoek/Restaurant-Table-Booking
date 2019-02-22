@@ -61,7 +61,6 @@ body:before {
     left: 25%;
     position: absolute;
     color: #fff;
-    margin-top: -15px;
 }
 
 .te {
@@ -102,9 +101,7 @@ h1 {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     padding: 5px 10px;
-    border: 3px solid #61fb89;
-    -webkit-border-radius: 35px;
-    border-radius: 35px;
+    border: none;
     font: normal 16px/normal "Times New Roman", Times, serif;
     color: rgba(0, 142, 198, 1);
     -o-text-overflow: clip;
@@ -125,9 +122,7 @@ h1 {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     padding: 5px 10px;
-    border: 3px solid #61fb89;
-    -webkit-border-radius: 35px;
-    border-radius: 35px;
+    border: none;
     font: normal 16px/normal "Times New Roman", Times, serif;
     color: rgba(0, 142, 198, 1);
     -o-text-overflow: clip;
@@ -300,7 +295,7 @@ ul li a:hover:before {
     left: 5%;
 }
 #book .form{
-    width: 100%;
+    width: 500px;
     background-color: #051019;
     opacity: 0.7;
     margin-top: 30px;
