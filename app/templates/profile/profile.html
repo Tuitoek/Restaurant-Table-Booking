@@ -1,11 +1,11 @@
-<!-- {%extends 'base.html'%}
+{%extends 'base.html'%}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   {% block styles%}
-  {{ super() }}
+  {{ super() }}    </ul>
   <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
   {% endblock %}
   <title></title>
@@ -37,36 +37,3 @@
           </div>
       </div>
 
-
-
-
-      </div>
-      <div class="col-md-4" style="color:black">
-
-      </div>
-      <div class="col-md-4">
-        {% if user == current_user %}
-        <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
-        {% endif %}
-        {% if user == current_user %}
-        <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
-          <br>
-
-          <div class="form-group">
-            <input type="file" name="photo" class="form-control" required>
-            <br>
-            <input type="submit">
-          </div>
-
-        </form>
-
-        {% endif %}
-      </div>
-
-    </div>
-
-  </div>
-  {% endblock %}
-</body>
-
-</html> -->

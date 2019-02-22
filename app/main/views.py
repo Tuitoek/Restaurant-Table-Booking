@@ -1,9 +1,17 @@
-from flask import render_template,url_for,redirect,flash
+from flask import render_template,url_for,redirect,flash,request,abort
 from . import main
+<<<<<<< HEAD
 # from flask_login import login_required,current_user
 from ..models import Book
 from .forms import BookForm
 from .. import db
+=======
+from flask_login import login_required,current_user
+from ..models import Book,User
+from .forms import BookForm,UpdateProfile
+from .. import db,photos
+
+>>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb
 
 #Views
 @main.route('/',methods= ['POST', 'GET'])
@@ -37,4 +45,47 @@ def book():
 
     return render_template('booking.html',book_form=book_form)
 
+<<<<<<< HEAD
     
+=======
+@main.route('/user/<uname>')
+def profile(uname):
+    user = User.query.filter_by(username = uname).first()
+
+    if user is None:
+        abort(404)
+
+    return render_template("profile/profile.html", user = user)
+
+@main.route('/user/<uname>/update/pic',methods= ['POST','GET'])
+@login_required
+def update_pic(uname):
+    user = User.query.filter_by(username = uname).first()
+    if 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        path = f'photos/{filename}'
+        user.profile_pic_path = path
+        db.session.commit()
+        return redirect(url_for('.profile',uname=user.username))
+    return redirect(url_for('main.update_pic',uname=uname))
+
+@main.route('/user/<uname>/update',methods = ['GET','POST'])
+@login_required
+def update_profile(uname):
+    user = User.query.filter_by(username = uname).first()
+    if user is None:
+        abort(404)
+
+    form = UpdateProfile()
+
+    if form.validate_on_submit():
+        user.bio = form.bio.data
+        user.profile_pic_path = form.bio.data
+
+        db.session.add(user)
+        db.session.commit()
+
+        return redirect(url_for('.profile',uname=user.username))
+
+    return render_template('profile/update.html',form =form)
+>>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb
