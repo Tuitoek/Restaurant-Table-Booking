@@ -59,3 +59,11 @@ class Book(db.Model):
     def get_book(cls, id):
         book = Book.query.filter_by(book_id=id).desc().all()
         return book
+
+# class Hotellier(db.Model):
+#     __tablename__ = 'hotellier'
+#     id = db.Column(db.Integer,primary_key=True)
+#     id = db.Column(db.Integer,primary_key=True)
+#     id = db.Column(db.Integer,primary_key=True)
+#     id = db.Column(db.Integer,primary_key=True)
+#     id = db.Column(db.Integer,primary_key=True)
