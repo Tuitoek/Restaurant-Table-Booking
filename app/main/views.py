@@ -1,17 +1,10 @@
 from flask import render_template,url_for,redirect,flash,request,abort
 from . import main
-<<<<<<< HEAD
-# from flask_login import login_required,current_user
-from ..models import Book
-from .forms import BookForm
-from .. import db
-=======
 from flask_login import login_required,current_user
 from ..models import Book,User
 from .forms import BookForm,UpdateProfile
 from .. import db,photos
 
->>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb
 
 #Views
 @main.route('/',methods= ['POST', 'GET'])
@@ -45,9 +38,6 @@ def book():
 
     return render_template('booking.html',book_form=book_form)
 
-<<<<<<< HEAD
-    
-=======
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
@@ -88,4 +78,3 @@ def update_profile(uname):
         return redirect(url_for('.profile',uname=user.username))
 
     return render_template('profile/update.html',form =form)
->>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb
