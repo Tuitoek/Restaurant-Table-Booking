@@ -13,23 +13,25 @@ def index():
     '''
     return render_template('index.html')
 
-@main.route('/booking',methods=['POST','GET'])
-def booking():
+@main.route('/book',methods=['POST','GET'])
+def book():
     '''
     View page function that returns the book page and its data
     '''
     book_form = BookForm()
     if book_form.validate_on_submit():
-        adults= book_form.adults.data
+        adult= book_form.adult.data
         date = book_form.date.data
         resname=book_form.resname.data
         restype=book_form.restype.data
         children = book_form.children.data
 
-        db.session.add(booking)
+        book = Book(adult = book_form.adult.data,date = book_form.date.data,resname = book_form.resname.data
+,restype = book_form.restype.data,children = book_form.children.data)
+        db.session.add(book)
         db.session.commit()
 
-        flash(f' Hi {{user.username}} Your Reservation has been made!')
+        flash(f' Hi Tuitoek Your Reservation has been made!')
 
         return redirect(url_for('main.index'))
 

@@ -52,8 +52,8 @@ class Book(db.Model):
     date = db.Column(db.String(100))
     resname = db.Column(db.String(40))
     restype = db.Column(db.String(30))
-    adult = db.Column(db.Integer)
-    children = db.Column(db.Integer)
+    adult = db.Column(db.String)
+    children = db.Column(db.String)
 
     @classmethod
     def get_book(cls, id):
