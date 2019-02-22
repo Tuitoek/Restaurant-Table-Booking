@@ -6,7 +6,7 @@ from ..models import User
 class RegisterForm(FlaskForm):
     email = StringField('Enter your email address',validators=[Required(),Email()])
     username = StringField('Enter your username',validators = [Required(),Length(min=5,max=25)])
-    password = PasswordField('Password',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match'),Length(min=8,max=25)])
+    password = PasswordField('Password Please',validators = [Required(), EqualTo('password_confirm',message = 'Passwords must match'),Length(min=8,max=25)])
     password_confirm = PasswordField('Confirm Passwords',validators = [Required(),Length(min=2,max=25)])
     submit = SubmitField('Sign Up')
 
@@ -20,6 +20,6 @@ class RegisterForm(FlaskForm):
 
 class LoginForm(FlaskForm):
     email = StringField('Your Email Address',validators=[Required(),Email()])
-    password = PasswordField('Password',validators =[Required()])
+    password = PasswordField('Password please',validators =[Required()])
     remember = BooleanField('Remember me')
     submit = SubmitField('Sign In')

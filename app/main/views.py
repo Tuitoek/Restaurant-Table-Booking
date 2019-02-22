@@ -3,6 +3,7 @@ from . import main
 # from flask_login import login_required,current_user
 from ..models import Book
 from .forms import BookForm
+from .. import db
 
 #Views
 @main.route('/',methods= ['POST', 'GET'])
