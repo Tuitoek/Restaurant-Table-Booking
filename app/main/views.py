@@ -1,10 +1,17 @@
 from flask import render_template,url_for,redirect,flash,request,abort
 from . import main
+<<<<<<< HEAD
+# from flask_login import login_required,current_user
+from ..models import Book
+from .forms import BookForm
+from .. import db
+=======
 from flask_login import login_required,current_user
 from ..models import Book,User
 from .forms import BookForm,UpdateProfile
 from .. import db,photos
 
+>>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb
 
 #Views
 @main.route('/',methods= ['POST', 'GET'])
@@ -14,28 +21,33 @@ def index():
     '''
     return render_template('index.html')
 
-@main.route('/booking',methods=['POST','GET'])
-def booking():
+@main.route('/book',methods=['POST','GET'])
+def book():
     '''
     View page function that returns the book page and its data
     '''
     book_form = BookForm()
     if book_form.validate_on_submit():
-        adults= book_form.adults.data
+        adult= book_form.adult.data
         date = book_form.date.data
         resname=book_form.resname.data
         restype=book_form.restype.data
         children = book_form.children.data
 
-        db.session.add(booking)
+        book = Book(adult = book_form.adult.data,date = book_form.date.data,resname = book_form.resname.data
+,restype = book_form.restype.data,children = book_form.children.data)
+        db.session.add(book)
         db.session.commit()
 
-        flash(f' Hi {{user.username}} Your Reservation has been made!')
+        flash(f' Hi Tuitoek Your Reservation has been made!')
 
         return redirect(url_for('main.index'))
 
     return render_template('booking.html',book_form=book_form)
 
+<<<<<<< HEAD
+    
+=======
 @main.route('/user/<uname>')
 def profile(uname):
     user = User.query.filter_by(username = uname).first()
@@ -76,3 +88,4 @@ def update_profile(uname):
         return redirect(url_for('.profile',uname=user.username))
 
     return render_template('profile/update.html',form =form)
+>>>>>>> 341eceb150961edbaac3aa540682c3ee6a8964fb

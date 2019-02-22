@@ -28,51 +28,119 @@ body:before {
 .main {
     text-align: center;
     position: absolute;
-    top: 8%;
+    color: #fff;
+    top: 20%;
     max-width: 600px;
+    z-index: 1;
     left: 30%;
 }
-.books{
+
+.books {
     position: absolute;
-    top: 45%;
-    left: 23%;
+    top: 90%;
+    left: 60%;
+    transform: translate(-50%, -50%)
 }
-.one{
+
+.one {
     z-index: 2;
     padding: 25px;
-    width: 300px;
-    height: 150px;-moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    width: 400px;
+    height: 200px;
+    -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
     -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
     box-shadow: -4px 12px 14px -4px #000;
-    margin-top: 30px;
+    margin-top: 25px;
     position: absolute;
     text-align: center;
     background-color: #61F8B9;
 }
-.me{
+
+.me {
     text-align: center;
     left: 25%;
     position: absolute;
-    margin-top: 5px;
+    color: #fff;
+    margin-top: -15px;
 }
-p{
-    font-size: 38px;
+
+.te {
+    margin-top: -15px;
+    color: #fff;
 }
-.two{
+
+p {
+    font-size: 25px;
+}
+
+.two {
     position: absolute;
     text-align: center;
-    width: 400px;
+    width: 600px;
     -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
     -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
     box-shadow: 0px 12px 14px -4px #000;
-    height: 170px;
-    left: 20%;
+    height: 250px;
+    left: 25%;
     z-index: 1;
     padding: 50px;
-    background-color: #4B2F99;
+    background-color: #0B034C;
 }
+
 h1 {
     font-size: 50px;
+    font-weight: bolder;
+}
+
+#book{
+    margin-top: -20px;
+}
+
+.bookz input{
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    border: 3px solid #61fb89;
+    -webkit-border-radius: 35px;
+    border-radius: 35px;
+    font: normal 16px/normal "Times New Roman", Times, serif;
+    color: rgba(0, 142, 198, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    width: 300px;
+    background: rgba(252, 252, 252, 1);
+    -webkit-box-shadow: 2px 7px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 7px 2px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+#book input {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 5px 10px;
+    border: 3px solid #61fb89;
+    -webkit-border-radius: 35px;
+    border-radius: 35px;
+    font: normal 16px/normal "Times New Roman", Times, serif;
+    color: rgba(0, 142, 198, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    width: 400px;
+    background: rgba(252, 252, 252, 1);
+    -webkit-box-shadow: 2px 7px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 7px 2px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.66);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 h3 {
@@ -83,10 +151,10 @@ h3 {
     -moz-box-shadow: 0px 12px 14px -7px #5c0e70;
     -webkit-box-shadow: 0px 12px 14px -7px #5c0e70;
     box-shadow: 0px 12px 14px -7px #000;
-    background-color: #4B2F99;
+    background-color: #0B034C;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: #fff;
     font-family: Arial;
     font-size: 13px;
     font-weight: bold;
@@ -97,6 +165,8 @@ h3 {
 
 .myButton:hover {
     background-color: #8752b3;
+    color: #fff;
+    text-decoration: none;
 }
 
 .myButton:active {
@@ -111,7 +181,7 @@ h3 {
     background-color: #61F8B9;
     display: inline-block;
     cursor: pointer;
-    color: #ffffff;
+    color: #fff;
     font-family: Arial;
     font-size: 13px;
     font-weight: bold;
@@ -121,7 +191,8 @@ h3 {
 }
 
 .myButtonz:hover {
-    background-color: #8752b3;
+    background-color: #61fb89;
+    text-decoration: none;
 }
 
 .myButtonz:active {
@@ -130,48 +201,109 @@ h3 {
 }
 
 
-.container  .navbar{
-    height: 80%;
-    background-color: #8752b3;
+.container-fluid .navbar {
+    height: 100%;
+    margin-top: 20px;
+    color: #fff;
+    -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    box-shadow: 0px 12px 14px -7px #000;
+    background-color: #0B034C;
 }
 
-.container{
+
+.container {
     width: 80%;
     height: 70%;
     margin: 0 auto;
 }
-ul{
+
+ul {
     margin: 0;
     padding: 0;
     float: right;
 }
-ul li{
+
+ul li {
     list-style: none;
-    margin: 10px;
+    text-decoration: none;
+    margin: 0 10px;
     float: left;
 }
-ul li a{
+
+.navbar-brand {
+    font-weight: bolder;
+}
+
+ul li a {
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     line-height: 50px;
     display: block;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     z-index: 1;
     position: relative;
 }
-ul li a:before{
-    content:"";
+
+ul li a:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
+    text-decoration: none;
     width: 100%;
     height: 0%;
     background: #61F8B9;
     transition: .5s;
     z-index: -1;
 }
-ul li a:hover:before{
-     height: 100%;
-     color: #4B2F99;
+
+ul li a:hover:before {
+    height: 100%;
+    color: #4B2F99;
+    text-decoration: none;
+    outline: none;
+    text-decoration: none;
+}
+#book #submit {
+    -moz-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    -webkit-box-shadow: 0px 12px 14px -7px #5b8a3c;
+    box-shadow: 0px 12px 14px -7px #000;
+    background-color: #0B034C;
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    color: #fff;
+    border: none;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 50px #5b8a3c;
+}
+
+#book #submit:hover {
+    background-color: #61fb89;
+    text-decoration: none;
+}
+
+#book #submit:active {
+    position: relative;
+    top: 1px;
+}
+#book{
+    text-align: center;
+    position: relative;
+    left: 5%;
+}
+#book .form{
+    width: 100%;
+    background-color: #051019;
+    opacity: 0.7;
+    margin-top: 30px;
+    padding: 15px 0px;
+
 }

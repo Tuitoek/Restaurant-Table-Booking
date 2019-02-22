@@ -1,28 +1,7 @@
 {% extends 'bootstrap/base.html' %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    {% if title%}
-    <title>{{ title }}</title>
-    {% else %}
-    <title>Telps | Make your reservation online</title>
-    {% endif %}
-</head>
-
-<body>
     <!-- Navbar Block-->
 
     {% block navbar %}
         {% include 'navbar.html' %}
     {% endblock navbar %}
-
-    <!-- Content Block -->
-    {% block content %}
-
-    {% endblock content %}
-
-</body>
-
-</html>
